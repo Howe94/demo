@@ -15,6 +15,7 @@ $(function () {
     })
 
 })
+// saksja
 
 function judgeTYXYDM(credNum) { //校验统一信用代码
     var ret = false;
