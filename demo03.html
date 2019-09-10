@@ -7,21 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <script type="text/javascript">
-        var name = GetQueryString("name");
-        var sex = GetQueryString("sex");
-        var age = GetQueryString("age");
-        console.log("name= "+name);
-        console.log("sex= "+sex);            
-        console.log("sex= "+age);            
-                                
-        function GetQueryString(name) {
-            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-            var r = window.location.search.substr(1).match(reg);
-            if (r != null)
-                return decodeURI(r[2]);
-            return null;
-        }
-    </script>
+<form action="http://127.0.0.1:8081/process_post" method="post">
+    <span>FristName :</span><input type="text" name="firstName" id="firstName"><br>
+    <span>LastName :</span><input type="text" name="lastName" id="lastName"><br>
+    <input type="submit" value="提交">
+</form>
 </body>
 </html>
